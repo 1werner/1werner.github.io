@@ -1,0 +1,12 @@
+{
+  "files": {
+    "css/style.sass": {
+      "output": "css/style.css",
+      "format": "sass"
+    }
+  },
+
+  "autowatch": [
+    "css/style.sass"
+  ]
+}
