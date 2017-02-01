@@ -1,14 +1,11 @@
-_site
-.idea
-node_modules
-
 
 # Created by https://www.gitignore.io/api/windows,jekyll,sass
 
 ### Windows ###
-# Windows image file caches
+# Windows thumbnail cache files
 Thumbs.db
 ehthumbs.db
+ehthumbs_vista.db
 
 # Folder config file
 Desktop.ini
@@ -33,5 +30,6 @@ _site/
 
 
 ### Sass ###
-.sass-cache/
 *.css.map
+
+# End of https://www.gitignore.io/api/windows,jekyll,sass
