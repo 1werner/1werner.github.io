@@ -19,6 +19,7 @@ social:
   - title: linkedin
     url: https://www.linkedin.com/in/benediktwerner
   - title: codingame
+    icon: code
     url: https://www.codingame.com/profile/7afd5fdd66d4c8e46a0e01e15c9c0cca9353301
 
 # Build settings
