@@ -239,13 +239,13 @@ a:focus {
         transform: scale(1);
     }
 
-    50% {
+    100% {
         -moz-transform: scale(1.2);
         transform: scale(1.2);
     }
 
     100% {
-        -moz-transform: scale(1);
+        -webkit-transform: scale(1);
         transform: scale(1);
     }
 }
@@ -254,7 +254,7 @@ a:focus {
     padding-top: 100px;
 }
 
-.download-section {
+.projects-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
@@ -277,7 +277,7 @@ a:focus {
         padding-top: 200px;
     }
 
-    .download-section {
+    .projects-section {
         padding: 100px 0;
     }
 
