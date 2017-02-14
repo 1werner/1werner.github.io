@@ -179,7 +179,7 @@ a:focus {
 .btn-circle {
     width: 70px;
     height: 70px;
-    margin-top: 15px;
+    margin-top: 50px;
     padding: 7px 16px;
     border: 2px solid #fff;
     border-radius: 35px;
@@ -239,7 +239,7 @@ a:focus {
         transform: scale(1);
     }
 
-    100% {
+    50% {
         -moz-transform: scale(1.2);
         transform: scale(1.2);
     }
