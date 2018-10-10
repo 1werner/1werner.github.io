@@ -1,5 +1,6 @@
+node_modules
 
-# Created by https://www.gitignore.io/api/windows,jekyll,sass
+# Created by https://www.gitignore.io/api/windows
 
 ### Windows ###
 # Windows thumbnail cache files
@@ -22,14 +23,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-
-### Jekyll ###
-_site/
-.sass-cache/
-.jekyll-metadata
-
-
-### Sass ###
-*.css.map
-
-# End of https://www.gitignore.io/api/windows,jekyll,sass
+# End of https://www.gitignore.io/api/windows
