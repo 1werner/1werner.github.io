@@ -1,18 +1,30 @@
 .contact-section {
-  padding: 5rem 0 0;
+  padding: 10rem 0 1rem;
+  background: linear-gradient(to bottom, #{fade-out($black, .7)} 0%,#{fade-out($black, .5)} 65%,$black 100%), url('../img/bg-signup.jpg');
+  background-position: center;
+  background-size: cover;
   .card {
     border: 0;
     border-bottom: 0.25rem solid $primary;
+
     h4 {
       font-size: 0.8rem;
       font-family: 'Varela Round';
       text-transform: uppercase;
       letter-spacing: 0.15rem;
     }
+
     hr {
       border-color: $primary;
       border-width: 0.25rem;
       width: 3rem;
+      transition: width 150ms ease-in-out;
+    }
+
+    &:hover {
+      hr {
+        width: 4rem;
+      }
     }
   }
   .social {

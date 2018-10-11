@@ -1,11 +1,11 @@
 @import 'variables.scss';
 @import 'mixins.scss';
+@import 'utilities.scss';
 @import 'navbar.scss';
 @import 'masthead.scss';
 @import 'buttons.scss';
 @import 'about.scss';
 @import 'projects.scss';
-@import 'signup.scss';
 @import 'contact.scss';
 
 body {
@@ -15,10 +15,12 @@ body {
 
 a {
   color: $primary;
+  transition: color 150ms ease-in-out;
+
   &:focus,
   &:hover {
     text-decoration: none;
-    color: darken($primary, 20%);
+    color: lighten($primary, 5%);
   }
 }
 

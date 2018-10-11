@@ -4,6 +4,15 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/benediktwerner.github.io/blob/master/LICENSE)
  */
 
+.text-white-65 {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.pin-bottom {
+  position: absolute;
+  bottom: 2rem;
+}
+
 #mainNav {
   min-height: 56px;
   background-color: #fff;
@@ -13,7 +22,7 @@
   font-size: 80%;
   padding: 0.75rem;
   color: #64a19d;
-  border: 1px solid #64a19d;
+  border: none;
 }
 
 #mainNav .navbar-toggler:focus {
@@ -23,7 +32,7 @@
 #mainNav .navbar-brand {
   color: #161616;
   font-weight: 700;
-  padding: .9rem 0;
+  padding: 0.5rem 0;
 }
 
 #mainNav .navbar-nav .nav-item:hover {
@@ -43,21 +52,29 @@
     padding-bottom: 0;
     border-bottom: none;
     background-color: transparent;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
+    -webkit-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
   }
   #mainNav .navbar-brand {
-    padding: .5rem 0;
-    color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 0;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  #mainNav .navbar-brand i {
+    opacity: 0;
+    -webkit-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
   }
   #mainNav .nav-link {
     -webkit-transition: none;
     transition: none;
-    padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
+    padding: 2rem 1.5rem 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 0.25rem solid transparent;
+    -webkit-transition: color 250ms ease;
+    transition: color 250ms ease;
   }
   #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgba(255, 255, 255, 0.85);
   }
   #mainNav .nav-link:active {
     color: white;
@@ -68,10 +85,11 @@
   #mainNav.navbar-shrink .navbar-brand {
     color: #161616;
   }
+  #mainNav.navbar-shrink .navbar-brand i {
+    opacity: 1;
+  }
   #mainNav.navbar-shrink .nav-link {
     color: #161616;
-    padding: 1.5rem 1.5rem 1.25rem;
-    border-bottom: 0.25rem solid transparent;
   }
   #mainNav.navbar-shrink .nav-link:hover {
     color: #64a19d;
@@ -92,8 +110,8 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-masthead.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-masthead.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.8)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("/img/technology.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.8) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("/img/technology.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -102,23 +120,39 @@
 
 .masthead h1 {
   font-family: 'Varela Round';
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  font-size: 3.4rem;
+  line-height: 3.4rem;
+  background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .masthead h2 {
-  max-width: 20rem;
+  max-width: 17rem;
   font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .masthead h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+  .masthead h2 {
+    max-width: 22rem;
+    font-size: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
   .masthead h1 {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .masthead h2 {
+    max-width: 30rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -127,25 +161,14 @@
     height: 100vh;
     padding: 0;
   }
-  .masthead h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
-    letter-spacing: 0.8rem;
-  }
-  .masthead h2 {
-    max-width: 30rem;
-    font-size: 1.25rem;
-  }
 }
 
 .btn {
   -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
   padding: 1.25rem 2rem;
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: .15rem;
   border: 0;
 }
 
@@ -166,14 +189,48 @@
   background-color: #467370 !important;
 }
 
-.about-section {
-  padding-top: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+.btn-down {
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
 }
 
-.about-section p {
-  margin-bottom: 5rem;
+.btn-down:hover, .btn-down:focus {
+  outline: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.about-section {
+  padding-top: 10rem;
+  padding-bottom: 15rem;
+  background-color: black;
+  background-image: url("/img/ai-simple.png");
+  background-size: cover;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .about-section {
+    height: calc(100vh - 56px);
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+.about-section::before {
+  background: radial-gradient(circle closest-corner at 45% 70%, rgba(22, 22, 22, 0.85), #161616);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
 }
 
 .projects-section {
@@ -207,30 +264,12 @@
   }
 }
 
-.signup-section {
-  padding: 10rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
-.signup-section .form-inline input {
-  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  height: auto;
-  font-family: 'Varela Round';
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  border: 0;
-}
-
 .contact-section {
-  padding: 5rem 0 0;
+  padding: 10rem 0 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.3)), color-stop(65%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
+  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.5) 65%, #161616 100%), url("../img/bg-signup.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .contact-section .card {
@@ -249,6 +288,12 @@
   border-color: #64a19d;
   border-width: 0.25rem;
   width: 3rem;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+
+.contact-section .card:hover hr {
+  width: 4rem;
 }
 
 .contact-section .social {
@@ -280,11 +325,13 @@ body {
 
 a {
   color: #64a19d;
+  -webkit-transition: color 150ms ease-in-out;
+  transition: color 150ms ease-in-out;
 }
 
 a:focus, a:hover {
   text-decoration: none;
-  color: #3c6360;
+  color: #74aba7;
 }
 
 .bg-black {
