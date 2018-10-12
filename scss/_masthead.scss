@@ -4,16 +4,35 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, #{fade-out($black, .2)} 0%,#{fade-out($black, .5)} 75%,$black 100%), url('/img/technology.jpg');
+  background: linear-gradient(
+      to bottom,
+      #{fade-out($black, 0)} 0%,
+      #{fade-out($black, 0.2)} 25%,
+      #{fade-out($black, 0.5)} 75%,
+      $black 97%
+    ),
+    url("/img/technology.jpg");
+  // background: linear-gradient(
+  //     to bottom,
+  //     #{fade-out($black, 0.9)} 0%,
+  //     #{fade-out($black, 0.5)} 75%,
+  //     $black 100%
+  //   ),
+  //   url("/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
   h1 {
-    font-family: 'Varela Round';
+    font-family: "Varela Round";
     font-size: 3.4rem;
     line-height: 3.4rem;
-   background: -webkit-linear-gradient(fade-out(white, 0), fade-out(white, 0.4), fade-out(white, 0.2), fade-out(white, 0.9));
+    background: -webkit-linear-gradient(
+      fade-out(white, 0),
+      fade-out(white, 0.4),
+      fade-out(white, 0.2),
+      fade-out(white, 0.9)
+    );
     // background: -webkit-linear-gradient(fade-out(white, 0.1), fade-out(white, 1));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -23,7 +42,7 @@
     max-width: 17rem;
     font-size: 1rem;
   }
-  @media (min-width:576px) {
+  @media (min-width: 576px) {
     h1 {
       font-size: 5rem;
       line-height: 5rem;
@@ -33,7 +52,7 @@
       font-size: 1.25rem;
     }
   }
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     h1 {
       font-size: 6.5rem;
       line-height: 6.5rem;
@@ -44,7 +63,7 @@
       font-size: 1.5rem;
     }
   }
-  @media(min-width: 992px) {
+  @media (min-width: 992px) {
     height: 100vh;
     padding: 0;
   }

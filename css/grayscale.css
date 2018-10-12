@@ -104,8 +104,8 @@
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.8)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("/img/technology.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.8) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("/img/technology.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(25%, rgba(22, 22, 22, 0.8)), color-stop(75%, rgba(22, 22, 22, 0.5)), color-stop(97%, #161616)), url("/img/technology.jpg");
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.8) 25%, rgba(22, 22, 22, 0.5) 75%, #161616 97%), url("/img/technology.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -113,7 +113,7 @@
 }
 
 .masthead h1 {
-  font-family: 'Varela Round';
+  font-family: "Varela Round";
   font-size: 3.4rem;
   line-height: 3.4rem;
   background: -webkit-linear-gradient(white, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
@@ -218,7 +218,7 @@
 }
 
 .about-section::before {
-  background: radial-gradient(circle closest-corner at 45% 70%, rgba(22, 22, 22, 0.85), #161616);
+  background: radial-gradient(farthest-side at 45% 60%, rgba(22, 22, 22, 0.7), #161616 95%);
   position: absolute;
   top: 0;
   left: 0;

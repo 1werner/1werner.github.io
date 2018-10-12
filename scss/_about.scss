@@ -16,9 +16,9 @@
 
 .about-section::before {
   background: radial-gradient(
-    circle closest-corner at 45% 70%,
-    fade-out($black, 0.15),
-    $black
+    farthest-side at 45% 60%,
+    fade-out($black, 0.3),
+    $black 95%
   );
   position: absolute;
   top: 0;
