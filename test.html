@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <style>
+      :root {
+        --sat: env(safe-area-inset-top);
+        --sar: env(safe-area-inset-right);
+        --sab: env(safe-area-inset-bottom);
+        --sal: env(safe-area-inset-left);
+      }
+
+      body {
+        background-color: black;
+      }
+
+      pre {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Click me!</button>
+    <pre>Test</pre>
+    
+    <script>
+      const $ = (e) => document.querySelector(e);
+
+      $("button").addEventListener("click", () => {
+      $("pre").innerText = ["sat", "sar", "sab", "sal"]
+        .map((e) =>
+          getComputedStyle(document.documentElement).getPropertyValue("--" + e)
+        )
+        .join("\n");
+      });
+    </script>
+  </body>
+</html>
